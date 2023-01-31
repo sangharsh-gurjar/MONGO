@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/DummyItem1"
-        android:title="DummyItem"
+        android:title="Set Data"
         android:icon="@drawable/dummy"
         />
     <item

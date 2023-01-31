@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -42,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
                 int id =item.getItemId();
                 if(id==R.id.DummyItem1){
                     // do what you want to like call a function or fragment
+                    FragmentManager fm =getSupportFragmentManager();
+                    FragmentTransaction ft = fm.beginTransaction();
+                    ft.add(R.id.container,new SetDataFragment());
+                    ft.commit();
                 }
                 else if(id==R.id.DummyItem2){
 
@@ -53,10 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
-
-
-
     }
 
     @Override
